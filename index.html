@@ -18,15 +18,18 @@
     body {
       height: 100%;
       margin: 0;
+      overflow: hidden;
     }
 
     body {
       min-height: 100vh;
+      min-height: 100svh;
       display: grid;
       place-items: center;
       padding: clamp(24px, 5vw, 72px);
       background: var(--page-bg);
       font-family: Helvetica, Arial, sans-serif;
+      overscroll-behavior: none;
     }
 
     .logo-wrap {
@@ -39,8 +42,19 @@
       display: none;
       width: min(100%, clamp(220px, 48vw, 560px));
       max-height: min(28vh, 240px);
+      max-height: min(28svh, 240px);
       object-fit: contain;
       object-position: center;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+
+      .logo {
+        width: min(100%, 72vw);
+      }
     }
   </style>
 </head>
