@@ -1,1 +1,0 @@
-# gatesland.github.io
